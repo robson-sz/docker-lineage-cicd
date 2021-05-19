@@ -135,6 +135,8 @@ VOLUME $USERSCRIPTS_DIR
 ############################
 RUN mkdir -p $MIRROR_DIR $SRC_DIR $TMP_DIR $CCACHE_DIR $ZIP_DIR $LMANIFEST_DIR \
       $KEYS_DIR $LOGS_DIR $USERSCRIPTS_DIR
+      
+RUN ln -sf /proc/self/mounts /etc/mtab
 
 # Install build dependencies
 ############################
